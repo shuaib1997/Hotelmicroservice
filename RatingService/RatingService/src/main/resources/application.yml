@@ -1,17 +1,19 @@
 server:
-  port: 8082
+  port: 8083
 
 spring:
   application:
-    name: HOTEL-SERVICE
+    name: RATING-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/hoteldb
-    username: postgres
+    url: jdbc:mysql://localhost:3306/ratingdb
+    username: root
     password: shuaib
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
 
 eureka:
   instance:

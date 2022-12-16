@@ -20,9 +20,9 @@ public class UserController {
        User user1= this.userService.createUser(user);
        return ResponseEntity.status(HttpStatus.CREATED).body(user1);
     }
-
+// get single user
     @GetMapping("/{userId}")
-    public ResponseEntity<User> createUser(@PathVariable String userId){
+    public ResponseEntity<User> getSingleUser(@PathVariable String userId){
         User user= this.userService.getUser(userId);
         return ResponseEntity.ok(user);
     }
