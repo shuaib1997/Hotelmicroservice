@@ -22,7 +22,7 @@ public class UserController {
     }
 // get single user
     @GetMapping("/{userId}")
-    public ResponseEntity<User> fetchSingleUser(@PathVariable String userId){
+    public ResponseEntity<User> getSingleUser(@PathVariable String userId){
         User user= this.userService.getUser(userId);
         return ResponseEntity.ok(user);
     }
