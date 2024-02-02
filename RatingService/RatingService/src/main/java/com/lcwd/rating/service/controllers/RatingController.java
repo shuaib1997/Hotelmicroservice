@@ -21,7 +21,7 @@ public class RatingController {
     }
 
     @GetMapping("")
-    public ResponseEntity<List<Rating>> getRatings() {
+    public ResponseEntity<List<Rating>> fetchRatings() {
         return ResponseEntity.ok(this.ratingService.getAllRating());
     }
 
